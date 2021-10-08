@@ -13,6 +13,8 @@ Download imagenet pretrained model ResNeXt101ibn and SEResNet101ibn from [IBN-Ne
 
 2. Run `python tools/generate_gld_list.py`. This will generate `clean`, `c2x`, `trainfull` and `all` data for different stage of training.
 
+3. Validation annotation comes from all 1129 images in GLDv2. We expand the competition index set to [index_expand](https://drive.google.com/file/d/1ws6pxC8d8G9yabyVDAhvyw4nGnJbUHHv/view). Each query could find all its GTs in the expanded index set and the validation could be more accurate.
+
 
 ## Train
 
@@ -74,7 +76,7 @@ Use `R50_256` model trained from `clean` subset correspongding to the fast train
 
 * The challenge is held on [kaggle](https://www.kaggle.com/c/landmark-retrieval-2021) and the leaderboard can be found [here](https://www.kaggle.com/c/landmark-retrieval-2021/leaderboard). We rank 2nd(2/263) in this challenge.
 
-* Kaggle Discussion post link [here]()
+* Kaggle Discussion post link [here](https://www.kaggle.com/c/landmark-retrieval-2021/discussion/277273)
 
 * ICCV workshop slides coming soon.
 
