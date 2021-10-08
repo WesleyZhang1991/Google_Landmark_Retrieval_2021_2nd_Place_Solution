@@ -1,0 +1,32 @@
+BASE: 'configs/GLDv2/GLDv2_base.yml'
+
+MODEL:
+  PRETRAIN_CHOICE: 'imagenet'
+  PRETRAIN_PATH: '/home/gongyou.zyq/.torch/resnest/resnest269-0cc87c48.pth'
+  NAME: 'resnest269'
+
+INPUT:
+  SIZE_TRAIN: [448, 448]
+  SIZE_TEST: [448, 448]
+  PADDING: 18
+
+DATALOADER:
+  CACHE_LIST: 'cache_clean_list.pkl'
+
+SOLVER:
+  OPTIMIZER_NAME: 'SGD'
+  MAX_EPOCHS: 10
+  BASE_LR: 0.08
+  IMS_PER_BATCH: 28    # 16G: 12, 32G: 28
+  CHECKPOINT_PERIOD: 2
+  EVAL_PERIOD: 20
+  WEIGHT_DECAY:  0.0005
+  WEIGHT_DECAY_BIAS: 0.0005
+  WARMUP_EPOCHS: 1.0
+  COSINE_MARGIN: 0.3
+  COSINE_SCALE: 30
+
+TEST:
+  IMS_PER_BATCH: 28
+
+OUTPUT_DIR: 'logs/GLDv2clean/ResNeSt269_448'

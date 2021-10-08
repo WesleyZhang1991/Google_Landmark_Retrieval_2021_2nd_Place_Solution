@@ -1,0 +1,32 @@
+BASE: 'configs/GLDv2/GLDv2_base.yml'
+
+MODEL:
+  PRETRAIN_CHOICE: 'self'
+  PRETRAIN_PATH: '/home/gongyou.zyq/ILR2021/logs/GLDv2clean/ResNeSt/ResNeSt101_384_finetune/resnest101_6.pth'
+  NAME: 'resnest101'
+
+INPUT:
+  SIZE_TRAIN: [512, 512]
+  SIZE_TEST: [512, 512]
+  PADDING: 20
+
+DATALOADER:
+  CACHE_LIST: 'cache_full_list.pkl'
+
+SOLVER:
+  OPTIMIZER_NAME: 'SGD'
+  MAX_EPOCHS: 2
+  BASE_LR: 0.0008
+  IMS_PER_BATCH: 40    # 16G: 36, 32G: 48
+  CHECKPOINT_PERIOD: 2
+  EVAL_PERIOD: 20
+  WEIGHT_DECAY:  1e-5
+  WEIGHT_DECAY_BIAS: 1e-5
+  WARMUP_EPOCHS: 0.0
+  COSINE_MARGIN: 0.3
+  COSINE_SCALE: 30
+
+TEST:
+  IMS_PER_BATCH: 40
+
+OUTPUT_DIR: 'logs/GLDv2clean/ResNeSt101_512_all'

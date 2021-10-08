@@ -1,0 +1,41 @@
+MODEL:
+  METRIC_LOSS_TYPE: 'softmax'
+  IF_LABELSMOOTH: 'off'
+  IF_WITH_CENTER: 'no'
+  DEVICE_ID: ('0,1,2,3,4,5,6,7')
+  CNN_DROPOUT: 0.0
+  GEM: True
+  DIST_TRAIN: True
+  TRIPLET_LOSS_WEIGHT: 0.0
+  ID_LOSS_TYPE: arcface
+  COS_LAYER: True
+  NECK_BIAS: False
+
+INPUT:
+  PROB: 0.5 # random horizontal flip
+  RE_PROB: 1.0 # random erasing
+
+DATASETS:
+  NAMES: ('ourapi')
+  ROOT_TRAIN_DIR: ('/home/gongyou.zyq/datasets/instance_search/GLDv2/reid_images')
+  ROOT_VAL_DIR: ('/home/gongyou.zyq/datasets/instance_search/Oxford5k/reid_images')
+
+DATALOADER:
+  SAMPLER: 'softmax'
+  NUM_INSTANCE: 1
+  NUM_WORKERS: 32
+
+SOLVER:
+  WARMUP_METHOD: 'cosine'
+  LARGE_FC_LR: False
+  LOG_PERIOD: 100
+  BIAS_LR_FACTOR: 2
+  FP16_ENABLED: True
+
+TEST:
+  EVAL: True
+  RE_RANKING: False
+  WEIGHT: ''
+  NECK_FEAT: 'after'
+  FEAT_NORM: 'yes'
+  CBIR_METRIC: True

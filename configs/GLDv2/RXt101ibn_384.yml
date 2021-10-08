@@ -1,0 +1,32 @@
+BASE: 'configs/GLDv2/GLDv2_base.yml'
+
+MODEL:
+  PRETRAIN_CHOICE: 'imagenet'
+  PRETRAIN_PATH: '/home/gongyou.zyq/.torch/IBN-Net/resnext101_ibn_a-6ace051d.pth'
+  NAME: 'resnext101_ibn_a'
+
+INPUT:
+  SIZE_TRAIN: [384, 384]
+  SIZE_TEST: [384, 384]
+  PADDING: 15
+
+DATALOADER:
+  CACHE_LIST: 'cache_clean_list.pkl'
+
+SOLVER:
+  OPTIMIZER_NAME: 'SGD'
+  MAX_EPOCHS: 10
+  BASE_LR: 0.08
+  IMS_PER_BATCH: 40    # 16G: 48, 32G: 96
+  CHECKPOINT_PERIOD: 2
+  EVAL_PERIOD: 20
+  WEIGHT_DECAY:  0.0005
+  WEIGHT_DECAY_BIAS: 0.0005
+  WARMUP_EPOCHS: 1.0
+  COSINE_MARGIN: 0.3
+  COSINE_SCALE: 30
+
+TEST:
+  IMS_PER_BATCH: 40
+
+OUTPUT_DIR: 'logs/GLDv2clean/RXt101ibn_384'
