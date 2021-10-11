@@ -91,7 +91,8 @@ If you find our work useful in your research, please consider citing:
 ```
 @inproceedings{zhang2021landmark,
  title={2nd Place Solution to Google Landmark Retrieval 2021},
- author={Zhang, Yuqi and Xu, Xianzhe and Chen, Weihua and Wang, Yaohua and Zhang, Fangyi},
+ author={Zhang, Yuqi and Xu, Xianzhe and Chen, Weihua and Wang, Yaohua and Zhang, Fangyi and Wang Fan and Li Hao},
+ journal={arXiv preprint arXiv:2110.04294},
  year={2021}
 }
 ```
