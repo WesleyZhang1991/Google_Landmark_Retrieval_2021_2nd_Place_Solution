@@ -78,7 +78,7 @@ Use `R50_256` model trained from `clean` subset correspongding to the fast train
 
 * Kaggle Discussion post link [here](https://www.kaggle.com/c/landmark-retrieval-2021/discussion/277273)
 
-* ICCV workshop slides coming soon.
+* ICCV workshop [slides](https://github.com/WesleyZhang1991/Google_Landmark_Retrieval_2021_2nd_Place_Solution/blob/master/ILR21_RET_2nd-slides.pdf) and [videos](https://www.youtube.com/watch?v=bkT2Judxf_s).
 
 
 ## Thanks
