@@ -13,7 +13,7 @@ Download imagenet pretrained model ResNeXt101ibn and SEResNet101ibn from [IBN-Ne
 
 2. Run `python tools/generate_gld_list.py`. This will generate `clean`, `c2x`, `trainfull` and `all` data for different stage of training.
 
-3. Validation annotation comes from all 1129 images in GLDv2. We expand the competition index set to [index_expand](https://drive.google.com/file/d/1ws6pxC8d8G9yabyVDAhvyw4nGnJbUHHv/view). Each query could find all its GTs in the expanded index set and the validation could be more accurate.
+3. Validation annotation comes from all 1129 images in GLDv2. We expand the competition index set to [index_expand](https://drive.google.com/file/d/116L3o3twAo18IYfZNoD2vtHp3FfyvKzM/view?usp=sharing). Each query could find all its GTs in the expanded index set and the validation could be more accurate.
 
 
 ## Train
